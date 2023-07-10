@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<title>Student's Portal</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        	<link href="css/login.css" type="text/css" rel="stylesheet">
+	</head>
+	<body style="background-image:url('../student-record-data-storage-model/img/house.jpg');">
+		<header>
+			<nav>
+				<table style="width:100%;text-align:center;"><tr>
+					<td style="padding-top:20px;"><a href="index.html" style="font-size:18px;color:#e5e5e5;text-decoration:none;">Home</a></td>
+					<td style="padding-top:20px;"><a href="registermain.php" style="font-size:18px;color:#e5e5e5;text-decoration:none;">School-Portal</a></td>
+					<td style="padding-top:20px;"><a href="schoolfees.php" style="font-size:20px;text-atdgn:left;color:#e5e5e5;text-decoration:none;">Pay-School-Fees</a></td>
+					<td style="padding-top:20px;"><a href="studentcomplain.php" style="font-size:18px;color:#e5e5e5;text-decoration:none;">Complaint-Form</a></td>
+					<td style="padding-top:20px;"><a href="login.html" style="font-size:18px;color:#e5e5e5;text-decoration:none;">Login</a></td><td style="padding-top:20px;"><a href="resultverify.php" style="font-size:18px;color:#e5e5e5;text-decoration:none;">View Result</a></td>
+				</tr></table>
+			</nav>
+		</header>
+		<div class="loginbox">
+			<img src="../student-record-data-storage-model/img/mouau-logo.jpg" class="avatar" width="150px" height="150px">
+			<h1>Login Here</h1>
+			<form action="validate.php" method="POST">
+				<p>Username (Reg No)</p>
+				<input type="text" name="username" placeholder="Enter Username" required>
+				<p>Password (Pet Name)</p>
+				<input type="password" name="password" placeholder="Enter Password" required>
+				<input type="submit" name="login" placeholder="Login">
+				<a href="registermain.php">Don't have an account?</a>				
+			</form>
+		</div>
+	</body>
+</html>

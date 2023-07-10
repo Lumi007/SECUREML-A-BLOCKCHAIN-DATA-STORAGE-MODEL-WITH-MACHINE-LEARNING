@@ -1,0 +1,110 @@
+<!--<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Student's Portal</title>
+        <link href="css/index.css" type="text/css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<nav>
+					<ul>
+					<li><a href="index.html" style="font-size:18px;">Home</a></li>
+					<li><a href="registermain.php" style="font-size:18px;">Portal</a></li>
+					<li><a href="schoolfees.php" style="font-size:20px;text-align:left;">Pay-School-Fees</a></li>
+					<li><a href="login.html" style="font-size:18px;">Login</a></li>
+					</ul>
+				</nav>
+			</header>
+
+			<h1>Welocme to CVS Student Portal</h1>
+
+			<div class="slideshow-container">
+				<div class="mySlides fade">
+					<div class="numbertext">1 / 3</div>
+					<img src="img/2.jpg" style="width:100%">
+					<div class="text">Art & Design</div>
+				</div>
+				<div class="mySlides fade">
+					<div class="numbertext">2 / 3</div>
+					<img src="img/3.jpg" style="width:100%">
+					<div class="text">Research</div>
+				</div>
+
+				<div class="mySlides fade">
+					<div class="numbertext">3 / 3</div>
+					<img src="img/student.jpg" style="width:100%">
+					<div class="text">Tech</div>
+				</div>
+			</div>
+			<br>
+			<div style="text-align:center">
+				<span class="dot"></span> 
+				<span class="dot"></span> 
+				<span class="dot"></span> 
+			</div>
+			<script>
+				var slideIndex = 0;
+				showSlides();
+				
+				function showSlides() {
+					var i;
+					var slides = document.getElementsByClassName("mySlides");
+					var dots = document.getElementsByClassName("dot");
+					for (i = 0; i < slides.length; i++) {
+						slides[i].style.display = "none";  
+					}
+					slideIndex++;
+					if (slideIndex > slides.length) {
+						slideIndex = 1
+					}    
+					for (i = 0; i < dots.length; i++) {
+						dots[i].className = dots[i].className.replace(" active", "");
+					}
+					slides[slideIndex-1].style.display = "block";  
+					dots[slideIndex-1].className += " active";
+					setTimeout(showSlides, 3000); // Change image every 3 seconds
+				}
+			</script>
+		</div>
+	</body>
+</html>-->
+
+<html>
+	<head>
+		<title>Student's Portal</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        	<link href="css/login.css" type="text/css" rel="stylesheet">
+	</head>
+	<body style="background-image:url('../student-record-data-storage-model/img/house.jpg');">
+		<header>
+			<nav>
+				<table style="width:100%;text-align:center;"><tr>
+					<td style="padding-top:20px;"><a href="index.html" style="font-size:18px;color:#e5e5e5;text-decoration:none;">Home</a></td>
+					<td style="padding-top:20px;"><a href="registermain.php" style="font-size:18px;color:#e5e5e5;text-decoration:none;">School-Portal</a></td>
+					<td style="padding-top:20px;"><a href="schoolfees.php" style="font-size:20px;text-align:left;color:#e5e5e5;text-decoration:none;">Pay-School-Fees</a></td>
+					<td style="padding-top:20px;"><a href="studentcomplain.php" style="font-size:18px;color:#e5e5e5;text-decoration:none;">Complaint-Form</a></td>
+					<td style="padding-top:20px;"><a href="login.html" style="font-size:18px;color:#e5e5e5;text-decoration:none;">Login</a></td>
+					<td style="padding-top:20px;"><a href="resultverify.php" style="font-size:18px;color:#e5e5e5;text-decoration:none;">View Result</a></td>
+				</tr></table>
+			</nav>
+		</header>
+		<div class="loginbox">
+			<img src="../student-record-data-storage-model/img/mouau-logo.jpg" class="avatar" width="150px" height="150px">
+			<h1>Login Here</h1>
+			<form action="validate.php" method="POST">
+				<p>Username (Reg No)</p>
+				<input type="text" name="username" placeholder="Enter Username" required>
+				<p>Password (Pet Name)</p>
+				<input type="password" name="password" placeholder="Enter Password" required>
+				<input type="submit" name="login" placeholder="Login">
+				<a href="registermain.php">Don't have an account?</a>				
+			</form>
+		</div>
+	</body>
+</html>

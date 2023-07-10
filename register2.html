@@ -1,0 +1,108 @@
+<html>
+	<head>
+		<title>Student's Portal</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        	<link href="css/register.css" type="text/css" rel="stylesheet">
+	</head>
+	<body>
+		<header>
+			<nav>
+				<table style="width:100%;text-align:center;"><tr>
+					<td style="padding-top:20px;"><a href="index.html" style="font-size:18px;color:#e5e5e5;text-decoration:none;">Home</a></td>
+					<td style="padding-top:20px;"><a href="registermain.php" style="font-size:18px;color:#e5e5e5;text-decoration:none;">School-Portal</a></td>
+					<td style="padding-top:20px;"><a href="schoolfees.php" style="font-size:20px;text-atdgn:left;color:#e5e5e5;text-decoration:none;">Pay-School-Fees</a></td>
+					<td style="padding-top:20px;"><a href="studentcomplain.php" style="font-size:18px;color:#e5e5e5;text-decoration:none;">Complaint-Form</a></td>
+					<td style="padding-top:20px;"><a href="login.html" style="font-size:18px;color:#e5e5e5;text-decoration:none;">Login</a></td><td style="padding-top:20px;"><a href="resultverify.php" style="font-size:18px;color:#e5e5e5;text-decoration:none;">View Result</a></td>
+				</tr></table>
+			</nav>
+
+		</header>
+
+
+
+
+		<div class="loginbox" style="">
+		<br/>
+		<br/>
+			<img src="../student-record-data-storage-model/img/avatar.jpg" class="avatar" width="150px" height="150px">
+			<h1>Upload Credentials</h1>
+			<form action="registersub.php" method="POST"  multipart="" enctype="multipart/form-data">
+				<p>O'Level Certificate</p>
+				<input type="file" name="passport[]" placeholder="Enter Full Name" required>
+				<p>School Fees Reciept</p>
+				<input type="file" name="waec[]" placeholder="Enter Full Name" required>
+				<p>Your Passport (For ID Card Generation) </p>
+				<input type="file" name="nd[]" placeholder="Enter Email" required>
+				<p>Birth Certificate</p>
+				<input type="file" name="birth[]" placeholder="Enter Date of Birth" required>
+				<p>First School Leaving Certificate</p>
+				<input type="file" name="attestation[]" placeholder="Enter Address" required>
+				<p>Junior Secondary Certificate Examination (JSCE)</p>
+				<input type="file" name="fees[]" placeholder="Enter Your Department" required>
+				
+				<input type="submit" name="register2" placeholder="Upload">
+								
+			</form>
+
+								
+
+
+		</div>
+
+			<div class="col-md-4" >
+				
+				
+				<div class="panel panel-default"  style="width: 400px">
+					
+					<div class="panel-body">
+					<!--
+	Ideally these elements aren't created until it's confirmed that the 
+	client supports video/camera, but for the sake of illustrating the 
+	elements involved, they are created with markup (not JavaScript)
+-->
+
+
+
+
+<video id="video" width="100%"  autoplay></video>
+
+<script type="text/javascript">
+	// Grab elements, create settings, etc.
+var video = document.getElementById('video');
+
+// Get access to the camera!
+if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+    // Not adding { audio: true } since we only want video now
+    navigator.mediaDevices.getUserMedia({ video: true }).then(function(stream) {
+        //video.src = window.URL.createObjectURL(stream);
+        video.srcObject = stream;
+        video.play();
+    });
+}
+
+
+// Elements for taking the snapshot
+var canvas = document.getElementById('canvas');
+var context = canvas.getContext('2d');
+var video = document.getElementById('video');
+
+// Trigger photo take
+document.getElementById("snap").addEventListener("click", function() {
+	context.drawImage(video, 0, 0, 640, 480);
+});
+</script>
+				
+					</div>
+					
+					
+
+
+				</div>		
+
+			
+			</div>	
+
+	</body>
+</html>
